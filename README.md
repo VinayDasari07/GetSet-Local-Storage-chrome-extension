@@ -4,4 +4,4 @@ This extension will let the developers get the local storage values of any websi
 
 For e.g, getting the local storage values from dev/staging urls and setting those values into the localhost's localstorage.
 
-[Chrome Web Store](Get All the Local Storage values of one domain and set all those values in other domain's local storage)
+[Chrome Web Store](https://chrome.google.com/webstore/detail/getset-local-storage/ippidodkgapkblnaegmgjhdflkbonoco)
