@@ -1,13 +1,64 @@
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
   <body>
-    <main style="width:200px">
-        <h1>GET SET Local Storage</h1>
-        <button id="get" type="button" >GET</button>
-        <button id="set" type="button" >SET</button>
-        <p id="feedback" style="color: white; background-color: green;"></p>
-        <p id="getDescription"><b>GET info:</b> Gets all the local storage values of this domain.</p>
-        <p id="setDescription"><b>SET info:</b> Sets all the local storage values we got earlier in this domain.</p>
+    <header class="extenstionTitleCont">
+      <img class="extensionLogo" width="32px" height="32px" src="./images/favicon64x64.png" alt="logo">
+      <h3 class="extensionTitle">GetSet Local Storage & Session Storage</h3>
+    </header>
+    <main>
+        <div class="localStorageCont">
+          <h3 class="localStorageTitle">Local Storage:</h3>
+          <div class="localStorageBtns">
+            <button id="getLS" type="button" >Get</button>
+            <button id="setLS" type="button" >Set</button>
+            <button id="clearLS" type="button" >Clear</button>
+          </div>
+          <p id="feedbackLS" style="color: white; background-color: green;"></p>
+        </div>
+
+        <div class="sessionStorageCont">
+          <h3 class="sessionStorageTitle">Session Storage:</h3>
+          <div class="sessionStorageBtns">
+            <button id="getSS" type="button" >Get</button>
+            <button id="setSS" type="button" >Set</button>
+            <button id="clearSS" type="button" >Clear</button>
+          </div>
+          <p id="feedbackSS" style="color: white; background-color: green;"></p>
+        </div>
+        
     </main>
+    <div class="footer">
+      <div class="information">
+        <p id="infoTitle">More Info</p>
+        <p id="supportTitle">Show Support</p>
+        <p id="reportTitle">Need help?</p>
+      </div>
+      <div class="hiddenContent">
+        <div class="moreinfoContent">
+          <p><b>Get:</b> Gets all the storage (local/session) values of this domain.</p>
+          <p><b>Set:</b> Sets all the storage (local/session) values we got earlier in this domain.</p>
+          <p><b>Clear:</b> Clears all the storage (local/session) values for this domain.</p>
+        </div>
+        <div class="supportContent">
+          <div class="rateOrReview">
+            <a href="https://chrome.google.com/webstore/detail/getset-local-storage/ippidodkgapkblnaegmgjhdflkbonoco" target="_blank">Give a 5 star review!</a>
+          </div>
+          <div class="starTheRepo">
+            <a href="https://github.com/VinayDasari07/GetSet-Local-Storage-chrome-extension" target="_blank">Star the GitHub Repo!</a>
+          </div>
+          <div class="buyMeACoffee">
+            <a href="https://www.buymeacoffee.com/vinaydasari" target="_blank">Buy me a Coffee!</a>
+          </div>
+        </div>
+        <div class="reportContent">
+          <div class="reportAnIssue">
+            <a href="https://github.com/VinayDasari07/GetSet-Local-Storage-chrome-extension/issues" target="_blank">Report an issue</a>
+          </div>
+        </div>
+      </div>
+      </div>
     <script type="module" src="popup.js"></script>
   </body>
 </html>
