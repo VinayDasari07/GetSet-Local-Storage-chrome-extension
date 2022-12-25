@@ -1,0 +1,95 @@
+* { 
+	box-sizing: border-box;
+}
+
+body {
+    width: 300px;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.extenstionTitleCont {
+    width: 100%;
+    background-color: yellow;
+    color: black;
+    padding: 2px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 70px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.localStorageCont, .sessionStorageCont {
+    padding: 4px;
+}
+
+.localStorageBtns, .sessionStorageBtns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#getLS:hover, #setLS:hover, #getSS:hover, #setSS:hover {
+    background-color: yellow;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+#clearLS:hover, #clearSS:hover {
+    background-color: red;
+    font-weight: bold;
+}
+
+#feedbackLS, #feedbackSS {
+    background-color: yellow;
+    text-align: center;
+}
+
+
+#infoTitle:hover, #supportTitle:hover, #reportTitle:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.moreinfoContent, .supportContent, .reportContent {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 8px;
+}
+
+.supportContent > div,  .reportContent > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.footerInfo {
+    height: 30px;
+    padding: 4px;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
