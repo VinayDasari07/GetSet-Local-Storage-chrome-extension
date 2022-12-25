@@ -25,7 +25,7 @@
         const clearSessionStorageBtn = document.querySelector('#clearSS')
         const feedBackForSessionStorage = document.querySelector('#feedbackSS')
 
-        const information = document.querySelector('.information')
+        const footerInfo = document.querySelector('.footerInfo')
 
         /*
         <-----------Util Functions Start------------------------------------------------------>
@@ -152,7 +152,7 @@
         getLocalStorageBtn?.addEventListener('click', async () => {
             const activeTab = await getActiveTabURL()
             const tabId = activeTab?.id
-            clearExtensionStorage(local)
+            await clearExtensionStorage(local)
             chrome.scripting.executeScript(
                 {
                     target: { tabId: tabId },
@@ -171,7 +171,7 @@
                                 local: result,
                             })
                             feedBackForLocalStorage.innerHTML =
-                                'All the local storage values are retrieved.'
+                                'All the local storage values are retrieved. ✔️'
                         }
                     } catch (err) {
                         console.error(
@@ -186,7 +186,7 @@
         getSessionStorageBtn?.addEventListener('click', async () => {
             const activeTab = await getActiveTabURL()
             const tabId = activeTab?.id
-            clearExtensionStorage(session)
+            await clearExtensionStorage(session)
             chrome.scripting.executeScript(
                 {
                     target: { tabId: tabId },
@@ -205,7 +205,7 @@
                                 session: result,
                             })
                             feedBackForSessionStorage.innerHTML =
-                                'All the session storage values are retrieved.'
+                                'All the session storage values are retrieved. ✔️'
                         }
                     } catch (err) {
                         console.error(
@@ -231,7 +231,7 @@
                     try {
                         console.log('Setting LocalStorage successfull')
                         feedBackForLocalStorage.innerHTML =
-                            'All the retrieved local storage values are set.'
+                            'All the retrieved local storage values are set. ✔️'
                     } catch (err) {
                         console.error(
                             'Error occured in injectionResults of setStoragehandler',
@@ -256,7 +256,7 @@
                     try {
                         console.log('Setting SessionStorage Successfull')
                         feedBackForSessionStorage.innerHTML =
-                            'All the retrieved session storage values are set.'
+                            'All the retrieved session storage values are set. ✔️'
                     } catch (err) {
                         console.error(
                             'Error occured in injectionResults of setStoragehandler',
@@ -292,7 +292,7 @@
                                 'Clearing Local Storage Values Successfull'
                             )
                             feedBackForLocalStorage.innerHTML =
-                                'All the local storage values are cleared.'
+                                'All the local storage values are cleared. ✔️'
                         } catch (err) {
                             console.error(
                                 'Error occured in injectionResults of clearLocalStorageBtn',
@@ -330,7 +330,7 @@
                                 'Clearing Session Storage Values Successfull'
                             )
                             feedBackForSessionStorage.innerHTML =
-                                'All the session storage values are cleared.'
+                                'All the session storage values are cleared. ✔️'
                         } catch (err) {
                             console.error(
                                 'Error occured in injectionResults of clearSessionStorageBtn',
@@ -342,7 +342,7 @@
             }
         })
 
-        information.addEventListener('click', (event) => {
+        footerInfo.addEventListener('click', (event) => {
             if (event?.target?.id === 'infoTitle') {
                 changeFooterTabStyles(event?.target?.id)
                 showHideFooterTabs('moreinfoContent')

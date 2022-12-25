@@ -49,15 +49,10 @@ button:hover {
 }
 
 #feedbackLS, #feedbackSS {
+    background-color: yellow;
     text-align: center;
 }
 
-.information {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 #infoTitle:hover, #supportTitle:hover, #reportTitle:hover {
     cursor: pointer;
@@ -87,7 +82,7 @@ a:hover {
     font-weight: bold;
 }
 
-.information {
+.footerInfo {
     height: 30px;
     padding: 4px;
     background-color: yellow;
